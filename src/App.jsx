@@ -38,7 +38,8 @@ function App() {
           />
 
           <Route path="/saved" element={<SavedTrips />} />
-
+          
+          <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
