@@ -1,273 +1,310 @@
-
 [
   {
     "id": "sample-package-01",
-    "title": "Sample Package 01",
-    "location": "Destination One",
+    "title": "Alpine Serenity Escape",
+    "location": "Lake Bled, Slovenia",
     "category": "Hill Station",
-    "duration": 3,
-    "pricePerPerson": 7499,
+    "duration": 4,
+    "pricePerPerson": 34999,
     "rating": 4.8,
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Mountain_Landscape.jpg",
-    "summary": "A sample travel package description. Replace this text with your own destination and experience details.",
+    "summary": "Experience the peaceful beauty of Lake Bled, surrounded by the Julian Alps. Discover its charming island, historic castle and scenic lakeside trails.",
     "highlights": [
-      "Sample highlight one",
-      "Sample highlight two",
-      "Sample highlight three",
-      "Sample highlight four"
+      "Traditional boat ride to Bled Island",
+      "Visit the historic Bled Castle",
+      "Panoramic views of the Julian Alps",
+      "Explore the lakeside promenade",
+      "Taste the famous Bled cream cake"
     ],
     "inclusions": [
-      "Sample accommodation",
-      "Sample breakfast plan",
-      "Local sightseeing",
-      "Scheduled transportation"
+      "3 nights sample accommodation",
+      "Daily breakfast",
+      "Bled Island sightseeing experience",
+      "Local transfers within the itinerary",
+      "Basic travel assistance"
     ],
     "exclusions": [
-      "Travel to and from the destination",
+      "International flights",
+      "Visa and travel insurance",
       "Lunch and dinner",
-      "Entry tickets",
+      "Optional adventure activities",
       "Personal expenses"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Arrival and Check-In",
-        "description": "Sample description for the first day of the package itinerary."
+        "title": "Arrival in Lake Bled",
+        "description": "Arrive in Bled, check in and spend the evening exploring the lakeside promenade. Enjoy the mountain scenery and local cuisine."
       },
       {
         "day": 2,
-        "title": "Sightseeing and Activities",
-        "description": "Sample description for the second day, including sightseeing and planned activities."
+        "title": "Island and Castle Exploration",
+        "description": "Take a traditional pletna boat to Bled Island and visit its Church of the Assumption. Later, explore Bled Castle overlooking the lake."
       },
       {
         "day": 3,
-        "title": "Departure",
-        "description": "Sample description for the final day, including checkout and departure."
+        "title": "Nature and Scenic Trails",
+        "description": "Explore the viewpoints around Lake Bled or take an excursion to nearby Vintgar Gorge. Enjoy the surrounding alpine landscape."
+      },
+      {
+        "day": 4,
+        "title": "Leisure and Departure",
+        "description": "Enjoy a relaxed morning, sample local Bled cream cake and prepare for departure."
       }
     ]
   },
   {
     "id": "sample-package-02",
-    "title": "Sample Package 02",
-    "location": "Destination Two",
+    "title": "Phuket Tropical Getaway",
+    "location": "Phuket, Thailand",
     "category": "Beach",
-    "duration": 2,
-    "pricePerPerson": 5999,
+    "duration": 4,
+    "pricePerPerson": 29999,
     "rating": 4.7,
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tropical-beach.jpg",
-    "summary": "A sample coastal travel package. Customize this description for your own travel business.",
+    "summary": "Escape to the tropical beaches of Phuket. Enjoy turquoise waters, island excursions, beautiful coastal viewpoints and the colourful atmosphere of Phuket Old Town.",
     "highlights": [
-      "Sample beach experience",
-      "Coastal sightseeing",
-      "Leisure activities",
-      "Local exploration"
+      "Relax at Kata or Karon Beach",
+      "Explore Phuket Old Town",
+      "Visit Promthep Cape viewpoint",
+      "Optional island-hopping excursion",
+      "Experience Thai food and night markets"
     ],
     "inclusions": [
-      "Sample accommodation",
-      "Breakfast",
-      "Local sightseeing",
-      "Scheduled transportation"
+      "3 nights sample accommodation",
+      "Daily breakfast",
+      "Local sightseeing transfers",
+      "Phuket Old Town exploration",
+      "Basic travel assistance"
     ],
     "exclusions": [
-      "Travel to and from the destination",
+      "International flights",
+      "Visa and travel insurance",
       "Lunch and dinner",
-      "Optional activities",
-      "Personal expenses"
+      "Optional island excursions",
+      "Water sports and personal expenses"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Arrival and Exploration",
-        "description": "Sample description for arrival, check-in and the first day's activities."
+        "title": "Welcome to Phuket",
+        "description": "Arrive in Phuket, check in and enjoy a relaxed evening exploring the nearby beach and local restaurants."
       },
       {
         "day": 2,
-        "title": "Activities and Departure",
-        "description": "Sample description for the second day's activities and departure."
+        "title": "Beaches and Coastal Views",
+        "description": "Explore Kata and Karon beaches. Continue towards Promthep Cape for scenic coastal views and a memorable sunset."
+      },
+      {
+        "day": 3,
+        "title": "Island Adventure and Old Town",
+        "description": "Choose an optional island-hopping experience or spend the day exploring Phuket Old Town, its colourful architecture, cafés and markets."
+      },
+      {
+        "day": 4,
+        "title": "Leisure and Departure",
+        "description": "Enjoy breakfast and some free time before checkout and departure."
       }
     ]
   },
   {
     "id": "sample-package-03",
-    "title": "Sample Package 03",
-    "location": "Destination Three",
+    "title": "Plitvice Waterfall Adventure",
+    "location": "Plitvice Lakes, Croatia",
     "category": "Adventure",
     "duration": 4,
-    "pricePerPerson": 8999,
+    "pricePerPerson": 32999,
     "rating": 4.9,
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Waterfall_in_forest.jpg",
-    "summary": "A sample adventure package. Add your own activities, destination details and package information.",
+    "summary": "Discover the spectacular lakes and waterfalls of Plitvice Lakes National Park. Walk through forest trails, cross wooden pathways and experience one of Croatia's remarkable natural landscapes.",
     "highlights": [
-      "Outdoor activities",
-      "Nature exploration",
-      "Guided experiences",
-      "Adventure activities"
+      "Explore the Upper and Lower Lakes",
+      "See the Great Waterfall",
+      "Walk along wooden pathways",
+      "Enjoy scenic forest trails",
+      "Optional electric boat ride across Lake Kozjak"
     ],
     "inclusions": [
-      "Sample accommodation",
+      "3 nights sample accommodation",
       "Daily breakfast",
-      "Guided activities",
-      "Scheduled transportation"
+      "Local transfers within the itinerary",
+      "Guided nature exploration",
+      "Basic travel assistance"
     ],
     "exclusions": [
-      "Travel to and from the destination",
+      "International flights",
+      "Visa and travel insurance",
+      "National park admission tickets",
       "Lunch and dinner",
-      "Activity fees unless specified",
       "Personal expenses"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Arrival and Introduction",
-        "description": "Sample description for arrival and introduction to the package."
+        "title": "Arrival and Nature Retreat",
+        "description": "Arrive near Plitvice Lakes, check in and enjoy a relaxed evening surrounded by the natural scenery of the region."
       },
       {
         "day": 2,
-        "title": "Adventure Activities",
-        "description": "Sample description for the planned adventure activities."
+        "title": "Lower Lakes Exploration",
+        "description": "Explore the Lower Lakes, limestone canyon pathways and the impressive Great Waterfall. Stop at scenic viewpoints along the route."
       },
       {
         "day": 3,
-        "title": "Exploration and Leisure",
-        "description": "Sample description for exploration and leisure activities."
+        "title": "Upper Lakes and Forest Trails",
+        "description": "Discover the Upper Lakes, wooded surroundings and smaller waterfalls. Enjoy an optional electric boat ride across Lake Kozjak."
       },
       {
         "day": 4,
-        "title": "Departure",
-        "description": "Sample description for checkout and departure."
+        "title": "Morning Leisure and Departure",
+        "description": "Enjoy a relaxed breakfast and a final opportunity to appreciate the surrounding landscape before departure."
       }
     ]
   },
   {
     "id": "sample-package-04",
-    "title": "Sample Package 04",
-    "location": "Destination Four",
+    "title": "Vienna Imperial Heritage",
+    "location": "Vienna, Austria",
     "category": "Heritage",
-    "duration": 2,
-    "pricePerPerson": 4499,
-    "rating": 4.6,
+    "duration": 3,
+    "pricePerPerson": 39999,
+    "rating": 4.8,
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schonbrunn_Palace.jpg",
-    "summary": "A sample cultural and heritage package. Replace this content with your own package information.",
+    "summary": "Step into Vienna's imperial past with a visit to Schönbrunn Palace, its magnificent gardens and the city's historic streets, museums and architectural landmarks.",
     "highlights": [
-      "Historic attractions",
-      "Cultural experiences",
-      "Guided tours",
-      "Local exploration"
+      "Explore Schönbrunn Palace",
+      "Walk through the palace gardens",
+      "Visit the Gloriette viewpoint",
+      "Discover Vienna's historic city centre",
+      "Experience traditional Viennese cafés"
     ],
     "inclusions": [
-      "Sample accommodation",
+      "2 nights sample accommodation",
       "Daily breakfast",
-      "Guided sightseeing",
-      "Local transportation"
+      "Local sightseeing transfers",
+      "Vienna city exploration",
+      "Basic travel assistance"
     ],
     "exclusions": [
-      "Travel to and from the destination",
-      "Meals unless specified",
-      "Entry tickets",
+      "International flights",
+      "Visa and travel insurance",
+      "Palace admission tickets",
+      "Lunch and dinner",
       "Personal expenses"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Arrival and Heritage Tour",
-        "description": "Sample description for the first day's cultural and sightseeing activities."
+        "title": "Arrival in Vienna",
+        "description": "Arrive in Vienna, check in and explore the historic city centre. Enjoy its architecture, cafés and lively streets."
       },
       {
         "day": 2,
-        "title": "Local Exploration and Departure",
-        "description": "Sample description for the second day's activities and departure."
+        "title": "Schönbrunn Palace Experience",
+        "description": "Visit Schönbrunn Palace and explore its imperial interiors and expansive gardens. Walk towards the Gloriette for views across the palace grounds."
+      },
+      {
+        "day": 3,
+        "title": "Vienna City Highlights",
+        "description": "Explore central Vienna, including St. Stephen's Cathedral and nearby historic streets. Enjoy a relaxed café visit before departure."
       }
     ]
   },
   {
     "id": "sample-package-05",
-    "title": "Sample Package 05",
-    "location": "Destination Five",
+    "title": "Algarve Coastal Escape",
+    "location": "Lagos, Algarve, Portugal",
     "category": "Beach",
     "duration": 3,
-    "pricePerPerson": 6499,
-    "rating": 4.8,
+    "pricePerPerson": 31999,
+    "rating": 4.7,
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rocky_Coastal_Cliff.jpg",
-    "summary": "A sample leisure package. Customize the destination, description and experiences as required.",
+    "summary": "Discover the dramatic coastline of Portugal's Algarve region. Explore golden beaches, rugged limestone formations, sea caves and charming coastal towns.",
     "highlights": [
-      "Leisure activities",
-      "Scenic locations",
-      "Local experiences",
-      "Relaxation"
+      "Explore Ponta da Piedade",
+      "Visit Praia Dona Ana",
+      "Discover the old town of Lagos",
+      "Optional coastal boat excursion",
+      "Enjoy scenic Atlantic Ocean viewpoints"
     ],
     "inclusions": [
-      "Sample accommodation",
+      "2 nights sample accommodation",
       "Daily breakfast",
-      "Local sightseeing",
-      "Scheduled transportation"
+      "Local sightseeing transfers",
+      "Lagos town exploration",
+      "Basic travel assistance"
     ],
     "exclusions": [
-      "Travel to and from the destination",
+      "International flights",
+      "Visa and travel insurance",
+      "Optional boat excursions",
       "Lunch and dinner",
-      "Optional activities",
       "Personal expenses"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Arrival and Leisure",
-        "description": "Sample description for arrival and leisure activities."
+        "title": "Arrival in Lagos",
+        "description": "Arrive in Lagos and explore its historic centre, traditional streets and waterfront. Enjoy the relaxed atmosphere of the Algarve coast."
       },
       {
         "day": 2,
-        "title": "Sightseeing and Experiences",
-        "description": "Sample description for sightseeing and planned experiences."
+        "title": "Coastal Cliffs and Beaches",
+        "description": "Visit Ponta da Piedade and admire its striking rock formations. Continue to Praia Dona Ana and enjoy the coastal scenery."
       },
       {
         "day": 3,
-        "title": "Departure",
-        "description": "Sample description for checkout and departure."
+        "title": "Coastal Leisure and Departure",
+        "description": "Enjoy a relaxed morning or an optional boat excursion along the coast before checkout and departure."
       }
     ]
   },
   {
     "id": "sample-package-06",
-    "title": "Sample Package 06",
-    "location": "Destination Six",
+    "title": "Singapore City Explorer",
+    "location": "Singapore",
     "category": "Heritage",
     "duration": 3,
-    "pricePerPerson": 7999,
-    "rating": 4.7,
+    "pricePerPerson": 27999,
+    "rating": 4.8,
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_cityscape.jpg",
-    "summary": "A sample heritage package. Use this entry to demonstrate another customizable package layout.",
+    "summary": "Experience the energy of Singapore through its iconic skyline, waterfront attractions, cultural neighbourhoods and spectacular gardens.",
     "highlights": [
-      "Historic landmarks",
-      "Cultural sightseeing",
-      "Guided experiences",
-      "Local activities"
+      "Explore Marina Bay waterfront",
+      "Visit Merlion Park",
+      "Discover Gardens by the Bay",
+      "Walk through Chinatown",
+      "Enjoy the Supertree Grove light show"
     ],
     "inclusions": [
-      "Sample accommodation",
+      "2 nights sample accommodation",
       "Daily breakfast",
-      "Guided sightseeing",
-      "Local transportation"
+      "Local sightseeing transfers",
+      "Singapore city exploration",
+      "Basic travel assistance"
     ],
     "exclusions": [
-      "Travel to and from the destination",
+      "International flights",
+      "Visa and travel insurance",
+      "Ticketed attraction admission",
       "Lunch and dinner",
-      "Entry fees",
       "Personal expenses"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Arrival and Introduction",
-        "description": "Sample description for arrival and introduction to the destination."
+        "title": "Welcome to Singapore",
+        "description": "Arrive in Singapore and explore the Marina Bay waterfront. Visit Merlion Park and enjoy the evening city skyline."
       },
       {
         "day": 2,
-        "title": "Heritage Exploration",
-        "description": "Sample description for the main sightseeing and cultural activities."
+        "title": "Gardens and City Attractions",
+        "description": "Discover Gardens by the Bay, including the Supertree Grove and optional conservatory visits. Enjoy the evening light and music show."
       },
       {
         "day": 3,
-        "title": "Departure",
-        "description": "Sample description for checkout and departure."
+        "title": "Cultural Exploration and Departure",
+        "description": "Explore Chinatown and nearby heritage landmarks. Enjoy some free time before checkout and departure."
       }
     ]
   }
