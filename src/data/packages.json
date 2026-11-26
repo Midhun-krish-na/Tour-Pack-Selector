@@ -1,284 +1,273 @@
+
 [
   {
-    "id": "munnar-escape",
-    "title": "Munnar Hill Escape",
-    "location": "Munnar, Kerala",
+    "id": "sample-package-01",
+    "title": "Sample Package 01",
+    "location": "Destination One",
     "category": "Hill Station",
     "duration": 3,
     "pricePerPerson": 7499,
     "rating": 4.8,
-    "image": "https://www.stjernegaard-rejser.dk/media/t0jn5ncd/munnar_temarker_2578455711.jpg?height=480&rnd=134159708357400000&width=960",
-    "summary": "Experience the misty hills, tea plantations and beautiful landscapes of Munnar.",
+    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+01",
+    "summary": "A sample travel package description. Replace this text with your own destination and experience details.",
     "highlights": [
-      "Tea plantation visit",
-      "Eravikulam National Park",
-      "Mattupetty Dam",
-      "Scenic mountain viewpoints"
+      "Sample highlight one",
+      "Sample highlight two",
+      "Sample highlight three",
+      "Sample highlight four"
     ],
     "inclusions": [
-      "2 nights hotel accommodation",
-      "Daily breakfast",
+      "Sample accommodation",
+      "Sample breakfast plan",
       "Local sightseeing",
-      "Transportation for scheduled sightseeing",
-      "Driver allowance and parking charges"
+      "Scheduled transportation"
     ],
     "exclusions": [
-      "Travel to and from Munnar",
+      "Travel to and from the destination",
       "Lunch and dinner",
-      "Entry tickets to attractions",
-      "Personal expenses",
-      "Adventure activities"
+      "Entry tickets",
+      "Personal expenses"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Arrival in Munnar and Scenic Viewpoints",
-        "description": "Arrive in Munnar, stop by waterfalls and tea slopes along the route, visit Pothamedu Viewpoint for panoramic valley views, check into your hotel, and enjoy a relaxed evening."
+        "title": "Arrival and Check-In",
+        "description": "Sample description for the first day of the package itinerary."
       },
       {
         "day": 2,
-        "title": "Eravikulam National Park and Tea Museum",
-        "description": "Head early to Eravikulam National Park (Rajamalai) to spot the Nilgiri tahr, then visit the KDHP Tea Museum and surrounding tea estates before browsing local tea, spice, and chocolate shops."
+        "title": "Sightseeing and Activities",
+        "description": "Sample description for the second day, including sightseeing and planned activities."
       },
       {
         "day": 3,
-        "title": "Mattupetty Dam, Echo Point and Departure",
-        "description": "After breakfast, visit Mattupetty Dam and lake, Echo Point, and Kundala or Top Station viewpoints as time permits, then check out and depart from Munnar."
+        "title": "Departure",
+        "description": "Sample description for the final day, including checkout and departure."
       }
     ]
   },
   {
-    "id": "alleppey-backwaters",
-    "title": "Alleppey Backwater Retreat",
-    "location": "Alleppey, Kerala",
+    "id": "sample-package-02",
+    "title": "Sample Package 02",
+    "location": "Destination Two",
     "category": "Beach",
     "duration": 2,
     "pricePerPerson": 5999,
     "rating": 4.7,
-    "image": "https://images.unsplash.com/photo-1519046904884-53103b34b206",
-    "summary": "Enjoy Kerala's peaceful backwaters, traditional houseboats and scenic village life.",
+    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+02",
+    "summary": "A sample coastal travel package. Customize this description for your own travel business.",
     "highlights": [
-      "Backwater cruise",
-      "Traditional Kerala cuisine",
-      "Village sightseeing",
-      "Sunset views"
+      "Sample beach experience",
+      "Coastal sightseeing",
+      "Leisure activities",
+      "Local exploration"
     ],
     "inclusions": [
-      "1 night accommodation",
-      "Houseboat or backwater cruise experience",
-      "Welcome refreshments",
+      "Sample accommodation",
       "Breakfast",
-      "Local sightseeing"
+      "Local sightseeing",
+      "Scheduled transportation"
     ],
     "exclusions": [
-      "Travel to and from Alleppey",
-      "Lunch and dinner unless specified",
-      "Personal expenses",
-      "Additional water activities",
-      "Tips and optional services"
+      "Travel to and from the destination",
+      "Lunch and dinner",
+      "Optional activities",
+      "Personal expenses"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Houseboat Check-In and Kuttanad Backwater Cruise",
-        "description": "Board your houseboat around noon with a welcome drink, cruise through Punnamada Lake, Vembanad Lake, and Kuttanad paddy fields with an optional village or canoe stop, and anchor by evening for sunset and an overnight stay on board."
+        "title": "Arrival and Exploration",
+        "description": "Sample description for arrival, check-in and the first day's activities."
       },
       {
         "day": 2,
-        "title": "Morning Cruise, Alleppey Sightseeing and Departure",
-        "description": "Enjoy a morning cruise and breakfast on board before checkout around 9:00 AM, explore local village canals or Alleppey Beach and nearby landmarks, and depart."
+        "title": "Activities and Departure",
+        "description": "Sample description for the second day's activities and departure."
       }
     ]
   },
   {
-    "id": "wayanad-adventure",
-    "title": "Wayanad Nature Adventure",
-    "location": "Wayanad, Kerala",
+    "id": "sample-package-03",
+    "title": "Sample Package 03",
+    "location": "Destination Three",
     "category": "Adventure",
     "duration": 4,
     "pricePerPerson": 8999,
     "rating": 4.9,
-    "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
-    "summary": "Discover Wayanad's forests, waterfalls, wildlife and exciting outdoor experiences.",
+    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+03",
+    "summary": "A sample adventure package. Add your own activities, destination details and package information.",
     "highlights": [
-      "Edakkal Caves",
-      "Banasura Sagar Dam",
-      "Soochipara Waterfalls",
-      "Nature trekking"
+      "Outdoor activities",
+      "Nature exploration",
+      "Guided experiences",
+      "Adventure activities"
     ],
     "inclusions": [
-      "3 nights accommodation",
+      "Sample accommodation",
       "Daily breakfast",
-      "Guided sightseeing",
-      "Scheduled local transportation",
-      "Trekking guide for planned trekking activities"
+      "Guided activities",
+      "Scheduled transportation"
     ],
     "exclusions": [
-      "Travel to and from Wayanad",
+      "Travel to and from the destination",
       "Lunch and dinner",
-      "Entry and activity fees",
-      "Personal trekking equipment",
+      "Activity fees unless specified",
       "Personal expenses"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Arrival in Wayanad and Pookode Lake",
-        "description": "Arrive in Wayanad via the ghat road with a stop at Lakkidi Viewpoint, visit Pookode Lake, and check into your stay for evening relaxation."
+        "title": "Arrival and Introduction",
+        "description": "Sample description for arrival and introduction to the package."
       },
       {
         "day": 2,
-        "title": "Edakkal Caves and Wildlife Excursion",
-        "description": "Trek up to the prehistoric Edakkal Caves in the morning (closed Mondays) and explore nearby Sulthan Bathery or a forest wildlife sanctuary/jeep safari depending on availability."
+        "title": "Adventure Activities",
+        "description": "Sample description for the planned adventure activities."
       },
       {
         "day": 3,
-        "title": "Banasura Sagar Dam and Soochipara Waterfalls",
-        "description": "Visit Banasura Sagar Dam and take a guided nature walk or trek to Soochipara (Sentinel Rock) Waterfalls and surrounding hill trails."
+        "title": "Exploration and Leisure",
+        "description": "Sample description for exploration and leisure activities."
       },
       {
         "day": 4,
-        "title": "Morning Leisure and Departure",
-        "description": "Enjoy breakfast at the hotel, take a short morning stop at a local viewpoint or plantation if time permits, check out, and depart from Wayanad."
+        "title": "Departure",
+        "description": "Sample description for checkout and departure."
       }
     ]
   },
   {
-    "id": "kochi-heritage",
-    "title": "Kochi Heritage Trail",
-    "location": "Kochi, Kerala",
+    "id": "sample-package-04",
+    "title": "Sample Package 04",
+    "location": "Destination Four",
     "category": "Heritage",
     "duration": 2,
     "pricePerPerson": 4499,
     "rating": 4.6,
-    "image": "https://gumlet.assettype.com/downtoearth%2F2025-10-08%2F4vry3vvc%2FKochi.jpg?ar=40%3A21&auto=format%2Ccompress&enlarge=true&mode=crop&ogImage=true&overlay=false&overlay_position=bottom&overlay_width=100&w=1200",
-    "summary": "Explore Fort Kochi's colonial architecture, historic streets and vibrant cultural heritage.",
+    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+04",
+    "summary": "A sample cultural and heritage package. Replace this content with your own package information.",
     "highlights": [
-      "Fort Kochi",
-      "Chinese fishing nets",
-      "Mattancherry Palace",
-      "Jewish Synagogue area"
+      "Historic attractions",
+      "Cultural experiences",
+      "Guided tours",
+      "Local exploration"
     ],
     "inclusions": [
-      "1 night hotel accommodation",
+      "Sample accommodation",
       "Daily breakfast",
-      "Guided heritage walk",
-      "Local sightseeing transportation",
-      "Trip coordinator assistance"
+      "Guided sightseeing",
+      "Local transportation"
     ],
     "exclusions": [
-      "Travel to and from Kochi",
-      "Lunch and dinner",
-      "Museum and monument entry fees",
-      "Shopping expenses",
+      "Travel to and from the destination",
+      "Meals unless specified",
+      "Entry tickets",
       "Personal expenses"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Fort Kochi Waterfront and Colonial Heritage",
-        "description": "Explore Fort Kochi's historic streets, see the Chinese Fishing Nets along the shore, visit St. Francis Church and Santa Cruz Cathedral Basilica, and catch an evening cultural performance or waterfront sunset."
+        "title": "Arrival and Heritage Tour",
+        "description": "Sample description for the first day's cultural and sightseeing activities."
       },
       {
         "day": 2,
-        "title": "Mattancherry Palace, Jew Town and Departure",
-        "description": "Visit Mattancherry Palace (Dutch Palace), stroll through Jew Town and the Paradesi Synagogue area and spice shops, then wrap up sightseeing and depart from Kochi."
+        "title": "Local Exploration and Departure",
+        "description": "Sample description for the second day's activities and departure."
       }
     ]
   },
   {
-    "id": "varkala-coast",
-    "title": "Varkala Coastal Getaway",
-    "location": "Varkala, Kerala",
+    "id": "sample-package-05",
+    "title": "Sample Package 05",
+    "location": "Destination Five",
     "category": "Beach",
     "duration": 3,
     "pricePerPerson": 6499,
     "rating": 4.8,
-    "image": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2",
-    "summary": "Relax along Varkala's beautiful cliffs, beaches and peaceful coastal surroundings.",
+    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+05",
+    "summary": "A sample leisure package. Customize the destination, description and experiences as required.",
     "highlights": [
-      "Varkala Cliff",
-      "Papanasam Beach",
-      "Sunset viewpoints",
-      "Local cafes and markets"
+      "Leisure activities",
+      "Scenic locations",
+      "Local experiences",
+      "Relaxation"
     ],
     "inclusions": [
-      "2 nights accommodation",
+      "Sample accommodation",
       "Daily breakfast",
-      "Beach and cliff sightseeing",
-      "Scheduled local transportation",
-      "Trip coordinator assistance"
+      "Local sightseeing",
+      "Scheduled transportation"
     ],
     "exclusions": [
-      "Travel to and from Varkala",
+      "Travel to and from the destination",
       "Lunch and dinner",
-      "Water sports and adventure activities",
-      "Personal expenses",
-      "Optional excursions"
-    ],
-    "itinerary": [
-      {
-        "day": 1,
-        "title": "Arrival, Varkala Cliff and Papanasam Beach",
-        "description": "Arrive in Varkala, walk along the North Cliff promenade, spend time by Papanasam Beach, browse cliffside cafes and shops, and watch the sunset over the Arabian Sea."
-      },
-      {
-        "day": 2,
-        "title": "Coastal Temples, Kappil Lake and Cliff Leisure",
-        "description": "Visit Janardhana Swamy Temple and nearby coastal spots such as Kappil Lake and beach, then return to the cliff in the evening for relaxed dining and local markets."
-      },
-      {
-        "day": 3,
-        "title": "Morning Beach Walk and Departure",
-        "description": "Enjoy a morning walk along the beach or cliff, have breakfast and last-minute shopping at local stalls, check out, and depart from Varkala."
-      }
-    ]
-  },
-  {
-    "id": "hampi-history",
-    "title": "Hampi Ancient Kingdom",
-    "location": "Hampi, Karnataka",
-    "category": "Heritage",
-    "duration": 3,
-    "pricePerPerson": 7999,
-    "rating": 4.7,
-    "image": "https://images.unsplash.com/photo-1600100397608-f010e9c7b6d1",
-    "summary": "Journey through the magnificent ruins, temples and historic landscapes of the Vijayanagara Empire.",
-    "highlights": [
-      "Virupaksha Temple",
-      "Vijaya Vittala Temple",
-      "Stone Chariot",
-      "Hampi Bazaar"
-    ],
-    "inclusions": [
-      "2 nights hotel accommodation",
-      "Daily breakfast",
-      "Guided heritage sightseeing",
-      "Scheduled local transportation",
-      "Trip coordinator assistance"
-    ],
-    "exclusions": [
-      "Travel to and from Hampi",
-      "Lunch and dinner",
-      "Monument entry fees",
-      "Coracle rides and optional activities",
+      "Optional activities",
       "Personal expenses"
     ],
     "itinerary": [
       {
         "day": 1,
-        "title": "Arrival, Virupaksha Temple and Hampi Bazaar",
-        "description": "Arrive in Hampi, visit the historic Virupaksha Temple and walk through Hampi Bazaar and nearby Sacred Centre ruins, with sunset views over the boulder landscape."
+        "title": "Arrival and Leisure",
+        "description": "Sample description for arrival and leisure activities."
       },
       {
         "day": 2,
-        "title": "Vijaya Vittala Temple, Stone Chariot and Royal Enclosure",
-        "description": "Explore the Vijaya Vittala Temple complex and its iconic Stone Chariot along with the Royal Enclosure and surrounding Vijayanagara monuments."
+        "title": "Sightseeing and Experiences",
+        "description": "Sample description for sightseeing and planned experiences."
       },
       {
         "day": 3,
-        "title": "Morning Ruins, River Views and Departure",
-        "description": "Take a morning visit to nearby temples or viewpoints along the Tungabhadra river belt, enjoy breakfast, check out, and depart from Hampi."
+        "title": "Departure",
+        "description": "Sample description for checkout and departure."
+      }
+    ]
+  },
+  {
+    "id": "sample-package-06",
+    "title": "Sample Package 06",
+    "location": "Destination Six",
+    "category": "Heritage",
+    "duration": 3,
+    "pricePerPerson": 7999,
+    "rating": 4.7,
+    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+06",
+    "summary": "A sample heritage package. Use this entry to demonstrate another customizable package layout.",
+    "highlights": [
+      "Historic landmarks",
+      "Cultural sightseeing",
+      "Guided experiences",
+      "Local activities"
+    ],
+    "inclusions": [
+      "Sample accommodation",
+      "Daily breakfast",
+      "Guided sightseeing",
+      "Local transportation"
+    ],
+    "exclusions": [
+      "Travel to and from the destination",
+      "Lunch and dinner",
+      "Entry fees",
+      "Personal expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival and Introduction",
+        "description": "Sample description for arrival and introduction to the destination."
+      },
+      {
+        "day": 2,
+        "title": "Heritage Exploration",
+        "description": "Sample description for the main sightseeing and cultural activities."
+      },
+      {
+        "day": 3,
+        "title": "Departure",
+        "description": "Sample description for checkout and departure."
       }
     ]
   }
