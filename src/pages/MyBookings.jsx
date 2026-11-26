@@ -33,11 +33,59 @@ function formatPrice(value) {
 }
 
 function MyBookings() {
-  const [bookings] = useState(() =>
+  const [bookings, setBookings] = useState(() =>
     readBookings().sort(
       (a, b) => new Date(b.bookedAt || 0) - new Date(a.bookedAt || 0)
     )
   );
+
+  function saveBookings(updatedBookings) {
+    setBookings(updatedBookings);
+
+    try {
+      localStorage.setItem("bookings", JSON.stringify(updatedBookings));
+    } catch (error) {
+      console.error("Could not update booking history:", error);
+    }
+  }
+
+  function cancelBooking(booking, index) {
+    const confirmed = window.confirm(
+      `Are you sure you want to cancel booking ${booking.reference || ""}?`
+    );
+
+    if (!confirmed) return;
+
+    const updatedBookings = bookings.map((item, itemIndex) => {
+      const isTarget = booking.reference
+        ? item.reference === booking.reference
+        : itemIndex === index;
+
+      return isTarget
+        ? { ...item, status: "cancelled", cancelledAt: new Date().toISOString() }
+        : item;
+    });
+
+    saveBookings(updatedBookings);
+  }
+
+  function removeBooking(booking, index) {
+    const confirmed = window.confirm(
+      "Permanently remove this booking from your browser history? This cannot be undone."
+    );
+
+    if (!confirmed) return;
+
+    const updatedBookings = bookings.filter((item, itemIndex) => {
+      if (booking.reference) {
+        return item.reference !== booking.reference;
+      }
+
+      return itemIndex !== index;
+    });
+
+    saveBookings(updatedBookings);
+  }
 
   return (
     <div className="mx-auto max-w-5xl">
@@ -51,7 +99,7 @@ function MyBookings() {
         </h1>
 
         <p className="mt-2 text-slate-600">
-          Review the booking details recorded in this browser.
+          Review and manage the booking details recorded in this browser.
         </p>
       </section>
 
@@ -81,75 +129,116 @@ function MyBookings() {
             Booking history ({bookings.length})
           </h2>
 
-          {bookings.map((booking, index) => (
-            <article
-              key={booking.reference || index}
-              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
-            >
-              <div className="flex flex-col justify-between gap-3 border-b border-slate-100 pb-4 sm:flex-row">
-                <div>
-                  <p className="text-xs font-semibold text-slate-500">
-                    {booking.reference || "Reference unavailable"}
-                  </p>
-                  <h3 className="mt-1 text-xl font-bold text-slate-900">
-                    {booking.packageTitle || "Travel package"}
-                  </h3>
-                </div>
+          {bookings.map((booking, index) => {
+            const isCancelled = booking.status === "cancelled";
 
-                <span className="h-fit rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800">
-                  Demo booking
-                </span>
-              </div>
+            return (
+              <article
+                key={booking.reference || index}
+                className={`rounded-2xl border bg-white p-5 shadow-sm sm:p-6 ${
+                  isCancelled
+                    ? "border-red-200"
+                    : "border-slate-200"
+                }`}
+              >
+                <div className="flex flex-col justify-between gap-3 border-b border-slate-100 pb-4 sm:flex-row">
+                  <div>
+                    <p className="text-xs font-semibold text-slate-500">
+                      {booking.reference || "Reference unavailable"}
+                    </p>
 
-              <div className="grid grid-cols-1 gap-4 py-5 text-sm sm:grid-cols-3">
-                <div>
-                  <p className="text-slate-500">Travel date</p>
-                  <p className="mt-1 font-semibold">
-                    {formatDate(booking.travelDate)}
-                  </p>
-                </div>
+                    <h3 className="mt-1 text-xl font-bold text-slate-900">
+                      {booking.packageTitle || "Travel package"}
+                    </h3>
+                  </div>
 
-                <div>
-                  <p className="text-slate-500">Travelers</p>
-                  <p className="mt-1 font-semibold">
-                    {booking.travelers ?? "—"}
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-slate-500">Booked on</p>
-                  <p className="mt-1 font-semibold">
-                    {formatDate(booking.bookedAt)}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-col justify-between gap-4 border-t border-slate-100 pt-4 sm:flex-row sm:items-center">
-                <div>
-                  <p className="text-sm text-slate-500">Total amount</p>
-                  <p className="text-xl font-bold text-emerald-700">
-                    {formatPrice(booking.total)}
-                  </p>
-                </div>
-
-                {booking.reference && (
-                  <Link
-                    to={`/confirmation/${encodeURIComponent(booking.reference)}`}
-                    className="rounded-xl border border-emerald-600 px-5 py-2.5 text-center text-sm font-semibold text-emerald-700 hover:bg-emerald-50"
+                  <span
+                    className={`h-fit rounded-full px-3 py-1 text-xs font-semibold ${
+                      isCancelled
+                        ? "bg-red-50 text-red-700"
+                        : "bg-amber-50 text-amber-800"
+                    }`}
                   >
-                    View confirmation
-                  </Link>
+                    {isCancelled ? "Cancelled" : "Demo booking"}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 gap-4 py-5 text-sm sm:grid-cols-3">
+                  <div>
+                    <p className="text-slate-500">Travel date</p>
+                    <p className="mt-1 font-semibold">
+                      {formatDate(booking.travelDate)}
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-slate-500">Travelers</p>
+                    <p className="mt-1 font-semibold">
+                      {booking.travelers ?? "—"}
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-slate-500">Booked on</p>
+                    <p className="mt-1 font-semibold">
+                      {formatDate(booking.bookedAt)}
+                    </p>
+                  </div>
+                </div>
+
+                {isCancelled && (
+                  <p className="mb-4 rounded-lg bg-red-50 p-3 text-sm text-red-700">
+                    Cancelled on {formatDate(booking.cancelledAt)}.
+                  </p>
                 )}
-              </div>
-            </article>
-          ))}
+
+                <div className="flex flex-col justify-between gap-4 border-t border-slate-100 pt-4 sm:flex-row sm:items-center">
+                  <div>
+                    <p className="text-sm text-slate-500">Total amount</p>
+                    <p className="text-xl font-bold text-emerald-700">
+                      {formatPrice(booking.total)}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col gap-2 sm:flex-row">
+                    {booking.reference && (
+                      <Link
+                        to={`/confirmation/${encodeURIComponent(booking.reference)}`}
+                        className="rounded-xl border border-emerald-600 px-4 py-2.5 text-center text-sm font-semibold text-emerald-700 hover:bg-emerald-50"
+                      >
+                        View confirmation
+                      </Link>
+                    )}
+
+                    {!isCancelled && (
+                      <button
+                        type="button"
+                        onClick={() => cancelBooking(booking, index)}
+                        className="rounded-xl border border-amber-500 px-4 py-2.5 text-sm font-semibold text-amber-700 hover:bg-amber-50"
+                      >
+                        Cancel booking
+                      </button>
+                    )}
+
+                    <button
+                      type="button"
+                      onClick={() => removeBooking(booking, index)}
+                      className="rounded-xl border border-red-300 px-4 py-2.5 text-sm font-semibold text-red-700 hover:bg-red-50"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </section>
       )}
 
       <p className="mt-8 rounded-xl bg-slate-50 p-4 text-xs text-slate-500">
         Bookings are stored locally in this browser for demonstration
-        purposes. They are not synced across devices and do not represent
-        real reservations or payments.
+        purposes. Cancelling or removing a booking only changes this local
+        history. It does not contact a travel provider or process a refund.
       </p>
     </div>
   );

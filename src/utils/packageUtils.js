@@ -1,4 +1,3 @@
-
 export function getPackageById(packages, id) {
   return packages.find((item) => item.id === id);
 }

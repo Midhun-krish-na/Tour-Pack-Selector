@@ -1,90 +1,71 @@
-# Travel Explorer – Tour Package Selector
+# CRYCIOUS — Travel Package Selector
 
-A responsive travel and tourism destination explorer built with **React** and **Tailwind CSS**. Users can explore curated travel packages, filter destinations, save trips to a wishlist, and simulate bookings with automatic cost calculations.
+A customizable, responsive travel package selection template built with React, Vite and Tailwind CSS.
+
+Travel Package Selector provides a starting point for travel agencies, tour operators, developers and businesses looking to create their own travel package browsing and booking interface.
+
+The template includes destination discovery, package details, traveller selection, booking calculations, saved trips and booking history.
 
 ## Features
 
-### Explore Destinations
-- Browse six curated travel packages across South India.
+### Explore Packages
+- Browse sample travel packages.
 - Search destinations by name or location.
-- Filter packages by category:
-  - Hill Station
-  - Beach
-  - Heritage
-  - Adventure
+- Filter packages by category.
 - Sort packages by price and rating.
 - Responsive destination cards.
 
 ### Package Details
-- View destination information and descriptions.
-- Explore trip highlights.
-- View day-by-day itineraries.
-- Check package inclusions and exclusions.
+- View destination descriptions.
+- Explore package highlights.
+- Browse day-by-day itineraries.
+- Review inclusions and exclusions.
 - View pricing per traveller.
 
-### Wishlist
-- Save and remove favourite travel packages.
-- View saved packages on a dedicated page.
-- Persist wishlist data using browser localStorage.
-- Display the saved-trip count in the navigation bar.
+### Saved Trips
+- Save favourite packages.
+- Remove saved packages.
+- View saved trips on a dedicated page.
+- Persistent browser storage.
 
-### Booking Simulation
+### Booking System
 - Select a travel date.
-- Adjust the number of travellers using increment/decrement controls or manual entry.
-- Calculate booking subtotal automatically.
-- Apply 5% GST.
-- Generate a booking reference.
+- Adjust traveller quantities using increment/decrement controls or manual entry.
+- Calculate booking subtotals automatically.
+- Calculate 5% GST.
+- Generate unique booking references.
 - View booking confirmation details.
 
-> **Note:** This is a frontend assessment project. Bookings are simulated and stored locally in the browser. The application does not process real payments or make actual travel reservations.
+### Booking Management
+- View booking history.
+- Review booking details and totals.
+- Cancel demo bookings.
+- Remove bookings from local history.
+- Retain booking status after refreshing the browser.
 
 ## Technology Stack
 
 | Technology | Purpose |
 |---|---|
 | React | User interface |
-| Vite | Development and build tooling |
-| Tailwind CSS | Styling and responsive design |
-| React Router DOM | Client-side routing |
+| Vite | Development and production build |
+| Tailwind CSS | Styling |
+| React Router DOM | Client-side navigation |
 | JavaScript | Application logic |
-| JSON | Local travel package dataset |
-| localStorage | Wishlist and booking persistence |
+| JSON | Sample package data |
+| localStorage | Local persistence |
 
 ## Application Routes
 
 | Route | Description |
 |---|---|
-| `/` | Explore destinations |
+| `/` | Explore packages |
 | `/package/:id` | Package details |
 | `/book/:id` | Booking form |
 | `/confirmation/:ref` | Booking confirmation |
 | `/saved` | Saved trips |
+| `/my-bookings` | Booking history and management |
 | `/404` | Not found page |
-
-## Project Structure
-
-```text
-Tour-Pack-Selector/
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── layout/
-│   │   ├── destination/
-│   │   └── booking/
-│   ├── context/
-│   ├── data/
-│   │   └── packages.json
-│   ├── hooks/
-│   ├── pages/
-│   ├── utils/
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-```
 
 ## Getting Started
 
@@ -94,15 +75,10 @@ Tour-Pack-Selector/
 
 ### Installation
 
-Clone the repository:
+Clone or download the project source.
 
 ```bash
 git clone https://github.com/Midhun-krish-na/Tour-Pack-Selector.git
-```
-
-Navigate into the project:
-
-```bash
 cd Tour-Pack-Selector
 ```
 
@@ -112,48 +88,92 @@ Install dependencies:
 npm install
 ```
 
-### Run Development Server
+### Start the development server
 
 ```bash
 npm run dev
 ```
 
-### Production Build
+### Create a production build
 
 ```bash
 npm run build
 ```
 
-The production-ready files are generated in the `dist/` directory.
+The production build is generated in the `dist/` directory.
 
-## Data and Persistence
+## Customization
 
-- Travel packages are maintained in `src/data/packages.json`.
+The project is designed to be customized and adapted to different travel businesses.
+
+You can modify:
+- Product branding and business identity.
+- Destinations and package information.
+- Pricing and package descriptions.
+- Categories and available features.
+- Visual styling and layout.
+- Application content and navigation.
+
+For detailed instructions, refer to:
+
+- `docs/INSTALLATION.md`
+- `docs/CUSTOMIZATION.md`
+- `docs/FEATURES.md`
+
+## Data and Limitations
+
+This template currently uses sample travel data.
+
+- Package information is maintained in `src/data/packages.json`.
 - Saved trips are stored in browser localStorage.
 - Booking records are stored in browser localStorage.
-- Data is local to the browser and is not synchronized between devices.
+- Booking cancellation and removal only affect local browser records.
+- Data is not synchronized across devices or users.
 
-## Responsive Design
+**Important:** This is a frontend template, not a complete travel reservation platform.
 
-The interface is designed for:
-- Mobile: 375px
-- Tablet: 768px
-- Desktop: 1280px
+It does not include a backend, database, user authentication, live availability, real reservation processing, payment gateway or refund processing.
 
-## Future Improvements
+Additional infrastructure and integrations must be implemented separately if required.
 
-- Reusable notification and feedback system.
-- Booking history dashboard.
-- Improved navigation and visual consistency.
-- Backend integration and persistent user accounts.
-- Real booking and payment integration.
+See `docs/LIMITATIONS.md` for further details.
 
-## Author
+## Licensing
 
-**Midhun Krishna M**
+This is a commercial product published by **CRYCIOUS**.
 
-GitHub: [Midhun-krish-na](https://github.com/Midhun-krish-na)
+Purchases are governed by the included End User Licence Agreement.
+
+Before using or distributing the template, review:
+
+- `docs/END_USER_LICENSE.md`
+- `docs/LICENSING.md`
+- `docs/THIRD_PARTY_LICENSES.md`
+
+Third-party dependencies and assets remain subject to their respective licences.
+
+The source code and original product materials must not be redistributed or resold outside the permissions granted by the applicable licence.
+
+## Support
+
+For product-related questions and support:
+
+**Email:** crycious.official@gmail.com
+
+Please include:
+- Product name.
+- Relevant issue or question.
+- Steps to reproduce technical problems.
+- Error messages or screenshots, when applicable.
+
+Refer to `docs/SUPPORT.md` for support terms.
+
+## Publisher
+
+**CRYCIOUS**
+
+Copyright © 2026 Midhun Krishna M. All rights reserved.
 
 ---
 
-*Developed as part of a frontend industry immersion assessment.*
+Built with React, Vite and Tailwind CSS.
