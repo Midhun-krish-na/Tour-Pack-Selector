@@ -31,10 +31,11 @@ Ensure that the project root contains `package.json`.
 Open a terminal in the project root and run:
 
 ```bash
-npm install
+npm ci
 ```
 
-This installs the dependencies defined in `package.json`.
+npm ci installs the exact dependency versions recorded in package-lock.json,
+ensuring a reproducible installation. Use npm install only when intentionally adding or updating dependencies.
 
 ## 4. Start the Development Server
 
@@ -92,7 +93,7 @@ Try:
 
 ```bash
 npm cache verify
-npm install
+npm ci
 ```
 
 ### Development server does not start
@@ -108,7 +109,7 @@ Check that:
 Run:
 
 ```bash
-npm install
+npm ci
 npm run build
 ```
 

@@ -76,7 +76,7 @@ The template includes destination discovery, package details, traveller selectio
 Clone or download the project source.
 
 ```bash
-git clone https://github.com/Midhun-krish-na/Tour-Pack-Selector.git
+git clone --branch commercial-product https://github.com/Midhun-krish-na/Tour-Pack-Selector.git
 cd Tour-Pack-Selector
 ```
 
