@@ -30,13 +30,18 @@ Unless expressly permitted by the applicable licence, purchasers may not:
 
 ## 4. Third-Party Components and Assets
 
-This product may include or depend on third-party software, libraries, fonts, icons, images, and other resources.
+This product includes or depends on third-party software and may reference third-party images and other external resources.
 
-These materials may be governed by separate licences.
+The sample travel photographs referenced by the package data have individual CC0 1.0 or Public Domain records. Their source information is documented in:
 
-Purchasers are responsible for reviewing the applicable terms before modifying, redistributing, or using those materials commercially.
+- `docs/ASSET_ATTRIBUTIONS.md`
+- `docs/THIRD_PARTY_LICENSES.md`
+
+These materials retain their respective licences and usage terms.
 
 The template's licence does not override third-party licences.
+
+Purchasers should review applicable terms before modifying, redistributing or using third-party materials commercially.
 
 ## 5. Open-Source Dependencies
 

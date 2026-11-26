@@ -4,7 +4,7 @@
 
 This document identifies third-party software and external resources used by the Travel Package Selector template.
 
-The project uses open-source dependencies and placeholder image URLs. Buyers should review the applicable licences and terms before modifying, redistributing, or deploying the template.
+The project uses open-source dependencies and externally hosted sample travel photographs. These resources retain their respective licence and usage terms.
 
 This document is an informational record, not legal advice.
 
@@ -52,17 +52,32 @@ MPL-2.0 is a file-level copyleft licence. If you modify and distribute files cov
 
 Do not remove applicable copyright notices or licence notices.
 
-## 4. Placeholder Images
+## 4. Sample Image Assets
 
-The sample package data uses placeholder image URLs from:
+The sample package data references six photographs hosted on Wikimedia Commons.
 
-- Placehold.co — https://placehold.co/
+The individual image records identify five photographs as Creative Commons CC0 1.0 and one photograph as Public Domain.
 
-These URLs are used only to demonstrate image placement in the template. They are not actual travel photographs or destination representations.
+| Image | Creator | Copyright status |
+|---|---|---|
+| Lake Mountain Landscape | Bonnie Moreland | CC0 1.0 |
+| Tropical Beach | Brodie Vissers | CC0 1.0 |
+| Waterfall in Forest | Martin Eklund | CC0 1.0 |
+| Schönbrunn Palace | Truete | CC0 1.0 |
+| Rocky Coastal Cliff | Holly's Coastal View | CC0 1.0 |
+| Singapore Cityscape | Andrew McMillan | Public Domain |
 
-The image service is external and is not bundled with the project. Its availability, terms and usage conditions are controlled by its provider.
+Individual source pages, licence references and creator information are recorded in:
 
-For production deployment, buyers should consider replacing remote placeholders with their own images or locally hosted assets.
+`docs/ASSET_ATTRIBUTIONS.md`
+
+General licence reference for CC0:
+
+https://creativecommons.org/publicdomain/zero/1.0/
+
+The photographs are referenced through external URLs in `src/data/packages.json`. They are not currently bundled as local image files.
+
+External hosting, availability and URL behaviour are controlled by the hosting provider. Buyers should consider downloading and hosting approved images themselves if they require long-term control over image availability.
 
 ## 5. Icons, Fonts and Other Assets
 
@@ -81,6 +96,7 @@ When customizing or deploying this template, buyers are responsible for:
 - Checking the usage rights of images, fonts, icons and other assets they add.
 - Reviewing external service terms before using third-party resources.
 - Complying with applicable open-source licence obligations when distributing modified software.
+- Reviewing separate rights that may apply to people, trademarks, logos or property depicted in images.
 
 ## 7. Licence References
 
@@ -91,17 +107,19 @@ When customizing or deploying this template, buyers are responsible for:
 - ISC License: https://opensource.org/license/isc-license-txt
 - Zero-Clause BSD: https://opensource.org/license/0bsd
 - Blue Oak Model License: https://blueoakcouncil.org/license/1.0.0
+- Creative Commons CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
 
 ## 8. Maintenance
 
-This document reflects a dependency snapshot and the sample assets currently identified.
+This document reflects an audited dependency snapshot and the sample assets currently identified.
 
-Whenever dependencies or bundled assets change:
+Whenever dependencies or assets change:
 
 1. Review the updated dependency lockfile.
 2. Recheck licence metadata and relevant licence files.
 3. Review newly added images, fonts, icons and other assets.
-4. Update this document when the inventory changes.
+4. Update `docs/ASSET_ATTRIBUTIONS.md` when image inventory changes.
+5. Update this document when the inventory changes.
 
 The licence inventory should be checked again before each commercial release.
 
@@ -110,5 +128,7 @@ The licence inventory should be checked again before each commercial release.
 **Document purpose:** Third-party software and asset licence information.
 
 **Project:** Travel Package Selector
+
+**Publisher:** CRYCIOUS
 
 **Status:** Informational — review before commercial distribution.

@@ -120,6 +120,19 @@ For detailed instructions, refer to:
 - `docs/CUSTOMIZATION.md`
 - `docs/FEATURES.md`
 
+## Sample Images and Asset Licences
+
+The sample package data references six externally hosted travel photographs.
+
+The selected photographs have individual CC0 1.0 or Public Domain records. Their creators, source pages and licence information are documented in:
+
+- `docs/ASSET_ATTRIBUTIONS.md`
+- `docs/THIRD_PARTY_LICENSES.md`
+
+Images are referenced through `src/data/packages.json` and are not currently bundled as local image files.
+
+You may replace the sample image URLs with images you have the rights to use. Review the relevant image licences and usage terms before redistributing or deploying customized content.
+
 ## Data and Limitations
 
 This template currently uses sample travel data.

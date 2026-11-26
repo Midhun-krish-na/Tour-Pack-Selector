@@ -8,7 +8,7 @@
     "duration": 3,
     "pricePerPerson": 7499,
     "rating": 4.8,
-    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+01",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Mountain_Landscape.jpg",
     "summary": "A sample travel package description. Replace this text with your own destination and experience details.",
     "highlights": [
       "Sample highlight one",
@@ -54,7 +54,7 @@
     "duration": 2,
     "pricePerPerson": 5999,
     "rating": 4.7,
-    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+02",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tropical-beach.jpg",
     "summary": "A sample coastal travel package. Customize this description for your own travel business.",
     "highlights": [
       "Sample beach experience",
@@ -95,7 +95,7 @@
     "duration": 4,
     "pricePerPerson": 8999,
     "rating": 4.9,
-    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+03",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Waterfall_in_forest.jpg",
     "summary": "A sample adventure package. Add your own activities, destination details and package information.",
     "highlights": [
       "Outdoor activities",
@@ -146,7 +146,7 @@
     "duration": 2,
     "pricePerPerson": 4499,
     "rating": 4.6,
-    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+04",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schonbrunn_Palace.jpg",
     "summary": "A sample cultural and heritage package. Replace this content with your own package information.",
     "highlights": [
       "Historic attractions",
@@ -187,7 +187,7 @@
     "duration": 3,
     "pricePerPerson": 6499,
     "rating": 4.8,
-    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+05",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rocky_Coastal_Cliff.jpg",
     "summary": "A sample leisure package. Customize the destination, description and experiences as required.",
     "highlights": [
       "Leisure activities",
@@ -233,7 +233,7 @@
     "duration": 3,
     "pricePerPerson": 7999,
     "rating": 4.7,
-    "image": "https://placehold.co/800x600/e8edf2/526170?text=Sample+Package+06",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_cityscape.jpg",
     "summary": "A sample heritage package. Use this entry to demonstrate another customizable package layout.",
     "highlights": [
       "Historic landmarks",
