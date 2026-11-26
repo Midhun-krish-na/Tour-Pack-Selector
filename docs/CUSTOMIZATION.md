@@ -1,252 +1,250 @@
 # Customization Guide
 
-This guide explains how to adapt the template to your brand, content, design preferences, and business requirements.
+This guide explains how to customize **Travel Package Selector** for your own travel business or demonstration project.
 
-The folder names and file organisation below describe a general recommended structure. Your purchased edition may organise some components differently.
+The template uses centralized configuration and structured package data to make common changes easier.
 
-## 1. General Project Structure
+## 1. Project Structure
 
-A typical React-based template may use the following structure:
+The main folders you'll work with are:
 
-```text
-project/
-│
-├── public/
-│   ├── images/
-│   ├── icons/
-│   └── favicon.svg
-│
-├── src/
-│   ├── assets/
-│   │   ├── images/
-│   │   ├── icons/
-│   │   └── fonts/
-│   │
-│   ├── components/
-│   │   ├── common/
-│   │   ├── layout/
-│   │   ├── forms/
-│   │   └── feature/
-│   │
-│   ├── pages/
-│   ├── routes/
-│   ├── data/
-│   ├── hooks/
-│   ├── context/
-│   ├── services/
-│   ├── utils/
-│   ├── styles/
-│   ├── App.jsx
-│   └── main.jsx
-│
-├── docs/
-├── index.html
-├── package.json
-├── package-lock.json
-├── vite.config.js
-└── README.md
-```
-
-### Folder responsibilities
-
-| Folder | Purpose |
+| Path | Purpose |
 |---|---|
-| `public/` | Static files served directly |
-| `assets/` | Images, fonts, and other imported assets |
-| `components/` | Reusable interface components |
-| `pages/` | Full application pages |
-| `routes/` | Route definitions and navigation configuration |
-| `data/` | Sample or static application data |
-| `hooks/` | Reusable React hooks |
-| `context/` | Shared application state |
-| `services/` | API and external service integration |
-| `utils/` | Helper functions and calculations |
-| `styles/` | Global styles, themes, and design tokens |
-| `docs/` | Project documentation |
+| `src/config/` | Central application configuration |
+| `src/data/` | Sample travel package data |
+| `src/components/` | Reusable interface components |
+| `src/components/layout/` | Navigation and footer |
+| `src/components/destination/` | Destination cards |
+| `src/pages/` | Application pages |
+| `src/utils/` | Shared utility functions |
+| `public/` | Static assets, favicon and deployment files |
+| `docs/` | Product documentation |
 
-Not every project needs every folder. Keep the structure appropriate to the size and complexity of your application.
+## 2. Central Configuration
 
-## 2. Customizing Branding
+The recommended starting point is:
 
-You can adapt the template to your own brand by changing:
+`src/config/siteConfig.js`
 
-- Website or application name.
-- Logo and favicon.
-- Brand colours.
-- Typography.
-- Navigation labels.
-- Footer content.
-- Contact and social media links.
+This file contains the main settings used across the application.
 
-Keep branding values consistent across the navigation, buttons, cards, forms, and other interface components.
+### Branding
 
-## 3. Customizing Colours and Theme
-
-Choose a small, consistent colour palette.
-
-A typical palette contains:
-
-| Token | Purpose |
-|---|---|
-| Primary | Main brand colour and important actions |
-| Secondary | Supporting interface elements |
-| Accent | Highlights and selected states |
-| Background | Page and section backgrounds |
-| Surface | Cards, panels, and forms |
-| Text | Primary and secondary text |
-| Border | Dividers and component boundaries |
-| Success | Successful actions |
-| Warning | Warnings and caution states |
-| Error | Validation and error messages |
-
-Where possible, define theme values centrally using CSS variables or your project's styling configuration.
-
-Avoid hardcoding slightly different versions of the same colour throughout the application.
-
-## 4. Customizing Typography
-
-You can change the appearance of the website by updating:
-
-- Font family.
-- Heading sizes.
-- Body text sizes.
-- Font weights.
-- Line heights.
-- Letter spacing.
-
-Use fonts that permit commercial use. If you use an external font service, review its licence and loading requirements.
-
-Maintain readable contrast and consistent typography across screen sizes.
-
-## 5. Managing Images and Icons
-
-To replace images:
-
-1. Select an image you have the right to use.
-2. Add it to the appropriate asset directory or update its image reference.
-3. Update the component or data entry that uses it.
-4. Check that the image loads correctly.
-5. Test its appearance on mobile and desktop.
-
-Recommended practices:
-
-- Use appropriately sized images.
-- Prefer modern formats such as WebP or AVIF where supported.
-- Provide meaningful alternative text for informative images.
-- Use consistent image aspect ratios within repeated components.
-- Avoid stretching images.
-- Provide fallback behaviour for missing images.
-
-Use only assets with suitable commercial usage rights.
-
-## 6. Customizing Application Data
-
-If the template uses static data files, you can modify them to suit your business.
-
-For a travel website, a package data model might look like this:
-
-```json
-{
-  "id": "sample-destination",
-  "title": "Sample Destination",
-  "location": "Example Location",
-  "category": "Adventure",
-  "duration": "3 Days",
-  "pricePerPerson": 7500,
-  "rating": 4.8,
-  "image": "/images/sample-destination.webp",
-  "summary": "A short description of the package.",
-  "highlights": [
-    "Scenic sightseeing",
-    "Guided activities"
-  ],
-  "inclusions": [
-    "Accommodation",
-    "Breakfast"
-  ],
-  "exclusions": [
-    "Personal expenses"
-  ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "Arrival",
-      "description": "Arrival and local sightseeing."
-    }
-  ]
+```js
+brand: {
+  publisher: "CRYCIOUS",
+  productName: "Travel Package Selector",
+  appName: "Travel Explorer",
+  supportEmail: "crycious.official@gmail.com",
 }
 ```
 
-This is an illustrative data structure. The actual field names and required properties depend on the template edition.
+Change these values to match your own brand and application.
 
-When modifying data:
+- `publisher`: Publisher or developer identity.
+- `productName`: Product name.
+- `appName`: Name displayed in the application.
+- `supportEmail`: Customer support contact.
 
-- Preserve unique identifiers.
-- Keep data types consistent.
-- Follow the existing structure.
-- Ensure required fields are present.
-- Check that components handle optional fields appropriately.
+### Currency
 
-## 7. Customizing Components
+```js
+currency: {
+  code: "INR",
+  locale: "en-IN",
+  symbol: "₹",
+}
+```
 
-Reusable components allow you to change the interface without duplicating the same markup across multiple pages.
+Change the currency code and locale to match your intended market.
 
-Common examples include:
+Examples:
 
-- Navigation bars.
-- Footers.
-- Buttons.
-- Cards.
-- Search fields.
-- Dropdowns.
-- Modals.
-- Forms.
-- Notifications.
+| Market | Currency code | Locale |
+|---|---|---|
+| India | INR | en-IN |
+| United States | USD | en-US |
+| United Kingdom | GBP | en-GB |
+| Europe | EUR | de-DE |
 
-Before creating a new component, check whether an existing component can be extended through props or shared styles.
+The application formats prices using the configured currency code and locale.
 
-Keep components focused on a clear responsibility.
+### Tax Configuration
 
-## 8. Customizing Pages and Navigation
+```js
+tax: {
+  name: "GST",
+  rate: 0.05,
+}
+```
 
-To modify an existing page:
+- `name`: Tax label displayed in the booking breakdown.
+- `rate`: Tax rate expressed as a decimal.
 
-1. Locate the relevant page component.
-2. Identify the components and data it depends on.
-3. Make the required changes.
-4. Check navigation and interactions.
-5. Test the page at mobile, tablet, and desktop widths.
+For example, `0.05` represents 5%.
 
-When adding a new page, also update the routing configuration and provide a clear navigation path where appropriate.
+Check the applicable tax requirements for your business before using a rate in a real booking system.
 
-## 9. Customizing Functionality
+### Traveller Limits
 
-For changes involving application behaviour:
+```js
+booking: {
+  minTravelers: 1,
+  maxTravelers: 50,
+}
+```
 
-- Keep calculations in reusable utility functions where appropriate.
-- Keep shared state in a suitable context or state-management layer.
-- Validate user input.
-- Provide feedback for successful and unsuccessful actions.
-- Handle missing or invalid data.
-- Test persistence behaviour if browser storage is used.
+These settings control the permitted traveller count in the booking form.
 
-If you introduce an external API or backend, review authentication, error handling, data validation, and security requirements before deployment.
+### Package Categories
 
-## 10. Customization Checklist
+```js
+categories: [
+  "Hill Station",
+  "Beach",
+  "Heritage",
+  "Adventure",
+]
+```
 
-Before publishing your customized website, verify:
+You can add, remove or rename categories.
 
-- [ ] Branding and logo have been updated.
-- [ ] Colours and typography are consistent.
-- [ ] Images and icons have appropriate usage rights.
-- [ ] Sample data has been replaced with accurate content.
-- [ ] Navigation links work.
-- [ ] Forms and interactive elements behave correctly.
-- [ ] Empty, loading, and error states are handled.
-- [ ] Mobile, tablet, and desktop layouts have been tested.
-- [ ] Production build completes successfully.
-- [ ] No demonstration content or placeholder links remain unintentionally.
+**Important:** Category names must match the corresponding `category` values in your package data. Otherwise, category filtering may not return the expected results.
+
+## 3. Managing Travel Packages
+
+Edit:
+
+`src/data/packages.json`
+
+This file contains the sample destination catalogue.
+
+Each package includes information such as:
+
+- Package name and destination.
+- Category and duration.
+- Price and rating.
+- Image reference.
+- Description and highlights.
+- Inclusions and exclusions.
+- Day-wise itinerary.
+
+When adding or editing packages:
+
+1. Give every package a unique ID.
+2. Preserve the existing property names and data types.
+3. Use valid category names.
+4. Provide a valid image reference.
+5. Ensure itinerary entries follow the existing structure.
+6. Check the package details and booking pages after editing.
+
+The included packages are illustrative sample content, not live travel offers.
+
+## 4. Images and Asset Rights
+
+The template includes sample destination images with documented licensing information.
+
+Before replacing or adding images:
+
+1. Confirm that you have the right to use the image commercially.
+2. Check whether redistribution is permitted.
+3. Record the creator, source and licence where attribution is required.
+4. Update the relevant image reference.
+5. Update `docs/ASSET_ATTRIBUTIONS.md` when changing bundled assets.
+
+Do not assume that an image available online is automatically free to redistribute.
+
+## 5. Branding and Interface
+
+The main interface components are located in:
+
+- `src/components/layout/Navbar.jsx`
+- `src/components/layout/Footer.jsx`
+- `src/components/destination/DestinationCard.jsx`
+
+The main pages are located in `src/pages/`.
+
+You can customize layouts, text, colours, typography and component appearance while preserving the existing functionality.
+
+The browser tab title and meta description are maintained separately in the root `index.html` file.
+
+The favicon is located at:
+
+`public/favicon.svg`
+
+## 6. Price Formatting
+
+The shared price utility is:
+
+`src/utils/formatPrice.js`
+
+It uses the currency configuration to format prices consistently throughout the application.
+
+If you change the currency settings, verify the price display on the package cards, package details, booking page, confirmation page and booking history.
+
+## 7. Booking Behaviour
+
+The included booking workflow is a frontend demonstration.
+
+It supports:
+
+- Traveller selection.
+- Input validation.
+- Price calculation.
+- Configured tax calculation.
+- Booking confirmation.
+- Local browser storage for booking history.
+
+It does not provide real reservations, payment processing, authentication, inventory management or refunds.
+
+A production booking service would require an appropriate backend and integrations.
+
+## 8. Running and Building the Project
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+Resolve build errors before deploying your customized application.
+
+## 9. Customization Checklist
+
+Before publishing:
+
+- [ ] Update application branding.
+- [ ] Update support contact details.
+- [ ] Configure the intended currency and locale.
+- [ ] Verify the tax configuration.
+- [ ] Adjust traveller limits if required.
+- [ ] Update package categories and package data together.
+- [ ] Verify image usage rights.
+- [ ] Update the favicon and browser metadata.
+- [ ] Test all application routes.
+- [ ] Test booking calculations and validation.
+- [ ] Test saved trips and booking history.
+- [ ] Test responsive layouts.
+- [ ] Run a production build.
 
 ---
 
-**Important:** Customization changes can affect existing functionality. Keep a backup or version-control checkpoint before making significant changes.
+**Important:** Keep a backup or version-control checkpoint before making significant changes. Always test customized functionality before deploying.

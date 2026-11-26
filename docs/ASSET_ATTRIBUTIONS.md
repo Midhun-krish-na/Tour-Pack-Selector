@@ -10,14 +10,18 @@ The project follows a conservative asset policy: sample photographs must have an
 
 ## 2. Image Inventory
 
-| Package | Image | Creator | Licence |
-|---|---|---|---|
-| Sample Package 01 | Lake Mountain Landscape | Bonnie Moreland | CC0 1.0 |
-| Sample Package 02 | Tropical Beach | Brodie Vissers | CC0 1.0 |
-| Sample Package 03 | Waterfall in Forest | Martin Eklund | CC0 1.0 |
-| Sample Package 04 | Schönbrunn Palace | Truete | CC0 1.0 |
-| Sample Package 05 | Rocky Coastal Cliff | Holly's Coastal View | CC0 1.0 |
-| Sample Package 06 | Singapore Cityscape | Andrew McMillan | Public Domain |
+The following images are used by the six illustrative sample packages in `src/data/packages.json`.
+
+| Sample package | Destination | Image | Creator | Licence |
+|---|---|---|---|---|
+| Alpine Serenity Escape | Lake Bled, Slovenia | Lake Mountain Landscape | Bonnie Moreland | CC0 1.0 |
+| Phuket Tropical Getaway | Phuket, Thailand | Tropical Beach | Brodie Vissers | CC0 1.0 |
+| Plitvice Waterfall Adventure | Plitvice Lakes, Croatia | Waterfall in Forest | Martin Eklund | CC0 1.0 |
+| Vienna Imperial Heritage | Vienna, Austria | Schönbrunn Palace | Truete | CC0 1.0 |
+| Algarve Coastal Escape | Lagos, Portugal | Rocky Coastal Cliff | Holly's Coastal View | CC0 1.0 |
+| Singapore City Explorer | Singapore | Singapore Cityscape | Andrew McMillan | Public Domain |
+
+**Image-to-destination note:** These are illustrative template pairings. The image-to-destination association does not claim that every photograph depicts the exact destination named in its sample package. The Schönbrunn Palace and Singapore Cityscape images depict their respective named locations.
 
 ## 3. Individual Source Records
 

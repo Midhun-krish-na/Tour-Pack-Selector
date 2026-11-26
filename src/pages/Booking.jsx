@@ -8,6 +8,8 @@ import {
 
 import packages from "../data/packages.json";
 import { getPackageById } from "../utils/packageUtils";
+import siteConfig from "../config/siteConfig";
+import { formatPrice } from "../utils/formatPrice";
 
 function getLocalDateString() {
   const date = new Date();
@@ -23,7 +25,9 @@ function Booking() {
   const navigate = useNavigate();
   const item = getPackageById(packages, id);
 
-  const [travelers, setTravelers] = useState("1");
+  const [travelers, setTravelers] = useState(
+    String(siteConfig.booking.minTravelers)
+  );
   const [travelDate, setTravelDate] = useState("");
   const [error, setError] = useState("");
 
@@ -32,26 +36,30 @@ function Booking() {
   }
 
   const travelerCount = Number(travelers);
+
   const validTravelers =
     Number.isInteger(travelerCount) &&
-    travelerCount >= 1 &&
-    travelerCount <= 50;
+    travelerCount >= siteConfig.booking.minTravelers &&
+    travelerCount <= siteConfig.booking.maxTravelers;
 
-  const subtotal = item.pricePerPerson * (validTravelers ? travelerCount : 0);
-  const gst = subtotal * 0.05;
+  const subtotal =
+    item.pricePerPerson * (validTravelers ? travelerCount : 0);
+
+  const gst =
+    Math.round(
+      (subtotal * siteConfig.tax.rate + Number.EPSILON) * 100
+    ) / 100;
+
   const total = subtotal + gst;
-
-  const formatPrice = (amount) =>
-    `₹${amount.toLocaleString("en-IN", {
-      maximumFractionDigits: 2
-    })}`;
 
   function handleBooking(event) {
     event.preventDefault();
     setError("");
 
     if (!validTravelers) {
-      setError("Please enter between 1 and 50 travelers.");
+      setError(
+        `Please enter between ${siteConfig.booking.minTravelers} and ${siteConfig.booking.maxTravelers} travelers.`
+      );
       return;
     }
 
@@ -141,7 +149,10 @@ function Booking() {
                 <button
                   type="button"
                   aria-label="Decrease travelers"
-                  disabled={!validTravelers || travelerCount <= 1}
+                  disabled={
+                    !validTravelers ||
+                    travelerCount <= siteConfig.booking.minTravelers
+                  }
                   onClick={() => {
                     setTravelers(String(travelerCount - 1));
                     setError("");
@@ -154,8 +165,8 @@ function Booking() {
                 <input
                   id="travelers"
                   type="number"
-                  min="1"
-                  max="50"
+                  min={siteConfig.booking.minTravelers}
+                  max={siteConfig.booking.maxTravelers}
                   step="1"
                   value={travelers}
                   onChange={(event) => {
@@ -168,7 +179,10 @@ function Booking() {
                 <button
                   type="button"
                   aria-label="Increase travelers"
-                  disabled={!validTravelers || travelerCount >= 50}
+                  disabled={
+                    !validTravelers ||
+                    travelerCount >= siteConfig.booking.maxTravelers
+                  }
                   onClick={() => {
                     setTravelers(String(travelerCount + 1));
                     setError("");
@@ -180,7 +194,8 @@ function Booking() {
               </div>
 
               <p className="mt-2 text-xs leading-5 text-slate-500">
-                Select between 1 and 50 travelers.
+                Select between {siteConfig.booking.minTravelers} and{" "}
+                {siteConfig.booking.maxTravelers} travelers.
               </p>
             </div>
 
@@ -278,7 +293,9 @@ function Booking() {
             </div>
 
             <div className="flex justify-between">
-              <span className="text-slate-500">GST (5%)</span>
+              <span className="text-slate-500">
+                {siteConfig.tax.name} ({siteConfig.tax.rate * 100}%)
+              </span>
               <span className="font-medium text-slate-800">
                 {formatPrice(gst)}
               </span>

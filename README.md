@@ -4,44 +4,42 @@ A customizable, responsive travel package selection template built with React, V
 
 Travel Package Selector provides a starting point for travel agencies, tour operators, developers and businesses looking to create their own travel package browsing and booking interface.
 
-The template includes destination discovery, package details, traveller selection, booking calculations, saved trips and booking history.
+The template includes destination discovery, package details, traveller selection, configurable booking calculations, saved trips and booking history.
 
 ## Features
 
 ### Explore Packages
-- Browse sample travel packages.
+- Browse six illustrative travel packages.
 - Search destinations by name or location.
 - Filter packages by category.
 - Sort packages by price and rating.
 - Responsive destination cards.
 
 ### Package Details
-- View destination descriptions.
-- Explore package highlights.
+- View destination descriptions and highlights.
 - Browse day-by-day itineraries.
 - Review inclusions and exclusions.
 - View pricing per traveller.
 
 ### Saved Trips
-- Save favourite packages.
-- Remove saved packages.
+- Save and remove favourite packages.
 - View saved trips on a dedicated page.
-- Persistent browser storage.
+- Persist saved trips using browser localStorage.
 
-### Booking System
+### Booking Demonstration
 - Select a travel date.
-- Adjust traveller quantities using increment/decrement controls or manual entry.
+- Adjust traveller quantities.
 - Calculate booking subtotals automatically.
-- Calculate 5% GST.
+- Calculate tax using the configured rate.
 - Generate unique booking references.
 - View booking confirmation details.
 
 ### Booking Management
 - View booking history.
 - Review booking details and totals.
-- Cancel demo bookings.
+- Cancel demonstration bookings.
 - Remove bookings from local history.
-- Retain booking status after refreshing the browser.
+- Retain booking records after refreshing the browser.
 
 ## Technology Stack
 
@@ -53,7 +51,7 @@ The template includes destination discovery, package details, traveller selectio
 | React Router DOM | Client-side navigation |
 | JavaScript | Application logic |
 | JSON | Sample package data |
-| localStorage | Local persistence |
+| localStorage | Browser-based persistence |
 
 ## Application Routes
 
@@ -65,7 +63,7 @@ The template includes destination discovery, package details, traveller selectio
 | `/confirmation/:ref` | Booking confirmation |
 | `/saved` | Saved trips |
 | `/my-bookings` | Booking history and management |
-| `/404` | Not found page |
+| Other unmatched paths | Not found page |
 
 ## Getting Started
 
@@ -102,19 +100,42 @@ npm run build
 
 The production build is generated in the `dist/` directory.
 
+### Preview the production build
+
+```bash
+npm run preview
+```
+
 ## Customization
 
-The project is designed to be customized and adapted to different travel businesses.
+The project uses centralized configuration and structured package data.
 
-You can modify:
-- Product branding and business identity.
-- Destinations and package information.
-- Pricing and package descriptions.
-- Categories and available features.
-- Visual styling and layout.
-- Application content and navigation.
+### Application Configuration
 
-For detailed instructions, refer to:
+Edit `src/config/siteConfig.js` to customize:
+
+- Publisher and application branding.
+- Support email.
+- Currency code and locale.
+- Tax name and rate.
+- Minimum and maximum traveller limits.
+- Package categories.
+
+### Travel Package Data
+
+Edit `src/data/packages.json` to customize:
+
+- Package names and destinations.
+- Categories and durations.
+- Prices and ratings.
+- Descriptions and highlights.
+- Inclusions and exclusions.
+- Day-by-day itineraries.
+- Image references.
+
+Category names in the configuration must match the category values used in the package data.
+
+For additional guidance, refer to:
 
 - `docs/INSTALLATION.md`
 - `docs/CUSTOMIZATION.md`
@@ -131,11 +152,13 @@ The selected photographs have individual CC0 1.0 or Public Domain records. Their
 
 Images are referenced through `src/data/packages.json` and are not currently bundled as local image files.
 
+The image-to-destination pairings are illustrative. Not every photograph necessarily depicts the exact destination named in its sample package.
+
 You may replace the sample image URLs with images you have the rights to use. Review the relevant image licences and usage terms before redistributing or deploying customized content.
 
 ## Data and Limitations
 
-This template currently uses sample travel data.
+This template currently uses illustrative sample travel data.
 
 - Package information is maintained in `src/data/packages.json`.
 - Saved trips are stored in browser localStorage.
@@ -143,7 +166,7 @@ This template currently uses sample travel data.
 - Booking cancellation and removal only affect local browser records.
 - Data is not synchronized across devices or users.
 
-**Important:** This is a frontend template, not a complete travel reservation platform.
+**Important:** This is a frontend template with a demonstration booking workflow, not a complete travel reservation platform.
 
 It does not include a backend, database, user authentication, live availability, real reservation processing, payment gateway or refund processing.
 

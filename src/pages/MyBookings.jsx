@@ -1,6 +1,9 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import packages from "../data/packages.json";
+import { formatPrice } from "../utils/formatPrice";
+import siteConfig from "../config/siteConfig";
 
 function readBookings() {
   try {
@@ -17,20 +20,11 @@ function formatDate(value) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return "Not specified";
 
-  return date.toLocaleDateString("en-IN", {
+  return date.toLocaleDateString(siteConfig.currency.locale, {
     day: "numeric",
     month: "short",
     year: "numeric",
   });
-}
-
-function formatPrice(value) {
-  const amount = Number(value);
-  if (!Number.isFinite(amount)) return "—";
-
-  return `₹${amount.toLocaleString("en-IN", {
-    maximumFractionDigits: 2,
-  })}`;
 }
 
 function MyBookings() {

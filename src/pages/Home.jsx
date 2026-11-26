@@ -2,6 +2,7 @@ import { useState } from "react";
 import packages from "../data/packages.json";
 import { filterPackages, sortPackages } from "../utils/packageUtils";
 import DestinationCard from "../components/destination/DestinationCard";
+import siteConfig from "../config/siteConfig";
 
 function Home() {
   const [search, setSearch] = useState("");
@@ -11,17 +12,16 @@ function Home() {
   const filteredPackages = filterPackages(packages, search, category);
   const displayedPackages = sortPackages(filteredPackages, sortBy);
 
-  const categories = [
-    "All",
-    "Hill Station",
-    "Beach",
-    "Heritage",
-    "Adventure",
-  ];
+  const categories = ["All", ...siteConfig.categories];
+
+  function resetFilters() {
+    setSearch("");
+    setCategory("All");
+    setSortBy("default");
+  }
 
   return (
     <div className="mx-auto max-w-7xl space-y-12 pb-10">
-      {/* Hero */}
       <section className="relative isolate min-h-[420px] overflow-hidden rounded-[2rem] bg-slate-900">
         <img
           src={packages[0]?.image}
@@ -64,7 +64,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Search */}
       <section className="-mt-5 px-2 sm:px-6">
         <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-xl shadow-slate-200/60 sm:p-5">
           <label
@@ -95,11 +94,7 @@ function Home() {
 
             <button
               type="button"
-              onClick={() => {
-                setSearch("");
-                setCategory("All");
-                setSortBy("default");
-              }}
+              onClick={resetFilters}
               className="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-600 transition hover:border-emerald-300 hover:text-emerald-700"
             >
               Reset filters
@@ -108,7 +103,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Destinations */}
       <section id="destinations" className="scroll-mt-8">
         <div className="mb-7 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
@@ -147,7 +141,6 @@ function Home() {
           </div>
         </div>
 
-        {/* Category filters */}
         <div className="mb-7 flex gap-2 overflow-x-auto pb-2">
           {categories.map((item) => (
             <button
@@ -192,10 +185,7 @@ function Home() {
             </p>
             <button
               type="button"
-              onClick={() => {
-                setSearch("");
-                setCategory("All");
-              }}
+              onClick={resetFilters}
               className="mt-5 rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-700"
             >
               Clear search

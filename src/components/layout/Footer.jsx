@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom";
+import siteConfig from "../../config/siteConfig";
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-20 text-slate-600 border-2 border-b-gray-500">
+    <footer className="border-t border-slate-200 bg-white text-slate-600">
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {/* Brand */}
           <div>
             <Link to="/" className="inline-flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-600 text-lg font-black text-white shadow-sm">
-                T
+                {siteConfig.brand.appName.charAt(0)}
               </span>
               <span className="text-xl font-extrabold tracking-tight text-slate-900">
-                Travel Explorer
+                {siteConfig.brand.appName}
               </span>
             </Link>
 
@@ -22,7 +24,6 @@ function Footer() {
             </p>
           </div>
 
-          {/* Navigation */}
           <div>
             <h2 className="text-sm font-bold uppercase tracking-wider text-slate-900">
               Explore
@@ -50,7 +51,6 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Support */}
           <div>
             <h2 className="text-sm font-bold uppercase tracking-wider text-slate-900">
               Support
@@ -61,10 +61,10 @@ function Footer() {
             </p>
 
             <a
-              href="mailto:crycious.official@gmail.com"
+              href={`mailto:${siteConfig.brand.supportEmail}`}
               className="mt-3 inline-block text-sm font-semibold text-emerald-700 transition hover:text-emerald-800"
             >
-              crycious.official@gmail.com
+              {siteConfig.brand.supportEmail}
             </a>
           </div>
         </div>
@@ -78,11 +78,14 @@ function Footer() {
 
           <div className="mt-6 flex flex-col gap-2 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} Travel Explorer. All rights reserved.
+              © {CURRENT_YEAR} {siteConfig.brand.appName}. All
+              rights reserved.
             </p>
             <p>
               Published by{" "}
-              <span className="font-semibold text-slate-800">CRYCIOUS</span>
+              <span className="font-semibold text-slate-800">
+                {siteConfig.brand.publisher}
+              </span>
             </p>
           </div>
         </div>

@@ -1,5 +1,8 @@
+
 import { Link, useParams } from "react-router-dom";
 import packages from "../data/packages.json";
+import siteConfig from "../config/siteConfig";
+import { formatPrice } from "../utils/formatPrice";
 
 function Confirmation() {
   const { ref } = useParams();
@@ -40,22 +43,13 @@ function Confirmation() {
     (item) => String(item.id) === String(booking.packageId)
   );
 
-  const formatPrice = (amount) => {
-    const value = Number(amount);
-    if (!Number.isFinite(value)) return "—";
-
-    return `₹${value.toLocaleString("en-IN", {
-      maximumFractionDigits: 2,
-    })}`;
-  };
-
   const formatDate = (value, options = {}) => {
     if (!value) return "Not specified";
 
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return "Not specified";
 
-    return date.toLocaleDateString("en-IN", {
+    return date.toLocaleDateString(siteConfig.currency.locale, {
       day: "numeric",
       month: "long",
       year: "numeric",
@@ -66,7 +60,6 @@ function Confirmation() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 md:py-16">
       <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-
         <div
           className={`px-6 py-10 text-center md:px-10 ${
             isCancelled ? "bg-red-50" : "bg-emerald-50"
@@ -109,7 +102,6 @@ function Confirmation() {
         </div>
 
         <div className="p-6 md:p-10">
-
           <section>
             <div className="flex items-center justify-between gap-4">
               <h2 className="text-xl font-bold text-slate-900">
@@ -185,7 +177,9 @@ function Confirmation() {
               </div>
 
               <div className="flex justify-between gap-4 text-slate-600">
-                <span>GST (5%)</span>
+                <span>
+                  {siteConfig.tax.name} ({siteConfig.tax.rate * 100}%)
+                </span>
                 <span className="font-medium text-slate-900">
                   {formatPrice(booking.gst)}
                 </span>

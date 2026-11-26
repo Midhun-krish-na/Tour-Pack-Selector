@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useSavedTrips } from "../../context/SavedTripsContext";
+import siteConfig from "../../config/siteConfig";
 
 function Navbar() {
   const { savedTrips } = useSavedTrips();
@@ -19,12 +20,12 @@ function Navbar() {
       >
         <Link to="/" className="group flex items-center gap-3">
           <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-600 text-lg font-black text-white shadow-md shadow-emerald-600/20 transition group-hover:rotate-3">
-            T
+            {siteConfig.brand.appName.charAt(0)}
           </span>
 
           <span>
             <span className="block text-xl font-extrabold tracking-tight text-slate-900">
-              Travel Explorer
+              {siteConfig.brand.appName}
             </span>
             <span className="block text-xs font-medium tracking-wide text-slate-500">
               Find your next escape

@@ -1,6 +1,8 @@
+
 import { Link, Navigate, useParams } from "react-router-dom";
 import packages from "../data/packages.json";
 import { getPackageById } from "../utils/packageUtils";
+import { formatPrice } from "../utils/formatPrice";
 
 function PackageDetails() {
   const { id } = useParams();
@@ -25,9 +27,9 @@ function PackageDetails() {
         <img
           src={item.image}
           alt={item.title}
-          className="h-72 w-full object-cover sm:h-96 lg:h-[460px]"
+          className="h-72 w-full object-cover sm:h-96 lg:h-115"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-slate-950/10" />
+        <div className="absolute inset-0 bg-linear-to-t from-slate-950/65 via-transparent to-slate-950/10" />
 
         <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
           <span className="inline-flex rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold text-emerald-800 backdrop-blur">
@@ -184,7 +186,7 @@ function PackageDetails() {
           </p>
 
           <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900">
-            ₹{item.pricePerPerson.toLocaleString("en-IN")}
+            {formatPrice(item.pricePerPerson)}
           </h2>
 
           <p className="mt-1 text-sm text-slate-500">
